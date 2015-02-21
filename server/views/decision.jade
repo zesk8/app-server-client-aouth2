@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .container
+    form.form-signin(method='post', action='/oauth/authorize', role='form' id='authorize')
+      input(type='hidden', name='allow', value='yes')
+      input(type='hidden', name='client_id', value='#{client_id}')
+      input(type='hidden', name='redirect_uri', value='#{redirect_uri}')
+      input(type='hidden', name='response_type', value='code')

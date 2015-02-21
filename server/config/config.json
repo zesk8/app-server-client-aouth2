@@ -1,0 +1,20 @@
+{
+    "express": {
+        "view cache": false,
+        "view engine": "jade",
+        "views": "path:views/"
+    },
+    "view engines": {
+        "jade": {
+            "module": "jade",
+            "renderer": "__express"
+        }
+    },
+    "middleware": {
+        "router": {
+            "module": {
+                "arguments": [{ "directory": "path:./controllers" }]
+            }
+        }
+    }
+}

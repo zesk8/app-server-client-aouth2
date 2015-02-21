@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    form.form-signin(method='post', action='', role='form')
+      h2.form-signin-heading Una aplicación desea conectarse a su cuenta
+      .form-group
+        .div La aplicación #{client_id} quiere acceder a su información
+      .form-group
+        input(type='hidden', name='allow', value='yes')
+        input(type='hidden', name='client_id', value='#{client_id}')
+        input(type='hidden', name='redirect_uri', value='#{redirect_uri}')
+        input(type='hidden', name='response_type', value='code')
+      .div ¿Permitir el acceso?
+      .div
+        button.btn.btn-danger(type='button') Denegar 
+        button.btn.btn-primary(type='submit') Acepto
